@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/styles.css?ver=1.1" />
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="header__wrapper">
+				<a href="/" class="logo">
+					<img src="img/logo.jpg" alt="alt">
+					<img src="img/logo2.jpg" alt="alt">
+				</a>
+				<div class="header__title">Требуется: Сварщики, Монтажники</div>
+			</div>
+		</header>
+
+		<section class="billbord">
+			<div class="billbord__image">
+				<img src="img/billbord.jpg" alt="alt">
+			</div>
+			<div class="billbord__content">
+				<h1 class="billbord__title">Санкт-Петербург</h1>
+				<h2 class="billbord__descr">Работа, халтура, объекты</h2>
+				<button class="btn-main open-modal">Присоединиться</button>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<a href="#" class="link-page">Политика конфиденциальности</a>
+		</footer>
+		
+	</div>
+
+	<div class="modals-wrap">
+		<div class="modal">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="progressbar">
+						<div class="progressbar__value"></div>
+					</div>
+					<div class="modal__title">Что Вас интересует</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="radio1"/>
+							<span>Работа</span>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="radio1"/>
+							<span>Подработка</span>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="radio1"/>
+							<span>Халтуры</span>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="radio1"/>
+							<span>Сотрудники</span>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="radio1"/>
+							<span>Объекты строительства</span>
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="radio1"/>
+							<span>Продолжить объем работ</span>
+						</label>
+					</div>
+					<div class="radio radio_cooperation">
+						<label>
+							<span class="radio__fake"></span>
+							<span>Сотрудничество</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="progressbar">
+						<div class="progressbar__value"></div>
+					</div>
+					<div class="modal__title">Какими видами сварки вы владете ?</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/>
+							<span>Ручная электродуговая</span>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/>
+							<span>Полуавтоматическая</span>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/>
+							<span>Аргоновая</span>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/>
+							<span>Плазменная</span>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/>
+							<span>Сварка в среде газа</span>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/>
+							<span>Введите другой вариант <input type="text" placeholder="Введите другой вариант"></span>
+						</label>
+					</div>
+					<div class="modal__buttons">
+						<button class="btn-page btn-page_border prev-modal"><img src="img/arrow.svg" alt="alt"> Назад</button>
+						<button class="btn-page next-modal">Далее <img src="img/arrow.svg" alt="alt"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="progressbar">
+						<div class="progressbar__value"></div>
+					</div>
+					<div class="modal__title">Расскажите о своем опыте работы</div>
+					<div class="item-form">
+						<textarea placeholder="Опишите свой опыт ..."></textarea>
+					</div>
+					<div class="modal__buttons">
+						<button class="btn-page btn-page_border prev-modal"><img src="img/arrow.svg" alt="alt"> Назад</button>
+						<button class="btn-page next-modal">Пропустить </button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal_form modal__callback" id="modal-callback">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="title-modal">Спасибо, мы получили ваши ответы !</div>
+					<div class="descr-modal">Наш специалист свяжется с Вами для уточнения деталей</div>
+					<form>
+						<div class="item-form">
+							<div class="item-form__title">Как к вам обращаться ?</div>
+							<input type="text" placeholder="Ваше имя" required>
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Как к с вми связаться ?</div>
+							<div class="radios-socials">
+								<div class="radio-social radio-social_call">
+									<label>
+										<input type="radio" name="socials" checked/>
+										<span class="radio-social__content">
+											<span class="radio-social__icon">
+												<img src="img/soc1.svg" alt="alt">
+											</span>
+											<span class="radio-social__title">Звонок</span>
+										</span>
+									</label>
+								</div>
+								<div class="radio-social radio-social_wp">
+									<label>
+										<input type="radio" name="socials"/>
+										<span class="radio-social__content">
+											<span class="radio-social__icon">
+												<img src="img/soc2.svg" alt="alt">
+											</span>
+											<span class="radio-social__title">WhatsApp</span>
+										</span>
+									</label>
+								</div>
+								<div class="radio-social radio-social_tg">
+									<label>
+										<input type="radio" name="socials"/>
+										<span class="radio-social__content">
+											<span class="radio-social__icon">
+												<img src="img/soc3.svg" alt="alt">
+											</span>
+											<span class="radio-social__title">Telegram</span>
+										</span>
+									</label>
+								</div>
+								<div class="radio-social radio-social_vk">
+									<label>
+										<input type="radio" name="socials"/>
+										<span class="radio-social__content">
+											<span class="radio-social__icon">
+												<img src="img/soc4.svg" alt="alt">
+											</span>
+											<span class="radio-social__title">ВКонтакте</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Введите номер телефона</div>
+							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" inputmode="numeric" required>
+						</div>
+						<button class="btn-main">Отправить</button>
+						<div class="agree-form">Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики конфиденциальности</a></div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal_success">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="title-success">Ваша заявка отправлена !</div>
+					<div class="icon-success">
+						<img src="img/success.svg" alt="alt">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="icon-share">
+						<img src="img/share.png" alt="alt">
+						<img src="img/share2.png" alt="alt">
+					</div>
+					<div class="title-share">Поделитесь этой вашей личной ссылкой с коллегами, чтобы мы знали состав вашей бригады</div>
+					<div class="share-unit">
+						<div class="share-unit__value">https://old.wordstat.yandex.ru/#!/?reg</div>
+						<div class="share-unit__btn">
+							<img src="img/chain.svg" alt="alt">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="modal modal_form modal_main" id="modal-cooperation">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<div class="modal__inner">
+					<div class="title-modal">Спасибо за обращение!</div>
+					<form>
+						<div class="item-form">
+							<input type="text" placeholder="Ваше имя" required>
+						</div>
+						<div class="item-form">
+							<input type="text" placeholder="Организация" required>
+						</div>
+						<div class="item-form">
+							<input type="email" placeholder="E-mail" inputmode="email" required>
+						</div>
+						<div class="item-form">
+							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" inputmode="numeric" required>
+						</div>
+						<div class="item-form">
+							<textarea placeholder="Сообщение"></textarea>
+						</div>
+						<button class="btn-main">Отправить</button>
+						<div class="agree-form">Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики конфиденциальности</a></div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<div class="modal-overlay"></div>
+
+
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/mask/jquery.maskedinput.js"></script>
+	<script src="js/common.js?ver=1.1"></script>
+</body>
+</html>
