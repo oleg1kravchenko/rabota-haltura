@@ -924,6 +924,10 @@ body {
 	max-height: 100%;
 	width: auto;
 }
+.btn-main_tg img {
+	left: 5px;
+	position: relative;
+}
 .billbord__buttons {
 	gap: 15px;
 	display: flex;
