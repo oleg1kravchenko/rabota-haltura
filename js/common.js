@@ -224,3 +224,6 @@ $(document).ready(function () {
 });
 
 
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  $('body').addClass('theme-dark');
+}
