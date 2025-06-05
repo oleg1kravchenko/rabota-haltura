@@ -9,10 +9,10 @@
 	<meta charset="utf-8">
 	<title>Заголовок</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/styles.css?ver=1.4">
+	<link rel="stylesheet" href="css/styles.css?ver=1.14">
 </head>
 <body>
 
@@ -144,7 +144,7 @@
 						<label>
 							<span class="checkbox__fake"></span>
 							<span class="checkbox__click"></span>
-							<span>Введите другой вариант <input type="text" placeholder="Введите другой вариант"></span>
+							<span>Другое <input type="text" placeholder="Введите другой вариант"></span>
 						</label>
 					</div>
 					<div class="modal__buttons">
@@ -183,14 +183,14 @@
 					<form>
 						<div class="item-form">
 							<div class="item-form__title">Как к вам обращаться ?</div>
-							<input type="text" placeholder="Ваше имя" required>
+							<input type="text" placeholder="Ваше имя" class="input-name" required>
 						</div>
 						<div class="item-form">
 							<div class="item-form__title">Как к с вми связаться ?</div>
 							<div class="radios-socials">
 								<div class="radio-social radio-social_call">
 									<label>
-										<input type="radio" name="socials" checked>
+										<input type="checkbox" checked>
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc1.svg" alt="alt">
@@ -201,7 +201,7 @@
 								</div>
 								<div class="radio-social radio-social_wp">
 									<label>
-										<input type="radio" name="socials">
+										<input type="checkbox">
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc2.svg" alt="alt">
@@ -212,7 +212,7 @@
 								</div>
 								<div class="radio-social radio-social_tg">
 									<label>
-										<input type="radio" name="socials">
+										<input type="checkbox">
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc3.svg" alt="alt">
@@ -223,7 +223,7 @@
 								</div>
 								<div class="radio-social radio-social_vk">
 									<label>
-										<input type="radio" name="socials">
+										<input type="checkbox">
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc4.svg" alt="alt">
@@ -236,7 +236,7 @@
 						</div>
 						<div class="item-form">
 							<div class="item-form__title">Введите номер телефона</div>
-							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" required>
+							<input type="tel" placeholder="+7 (___) ___-__-__" class="input-phone" required>
 						</div>
 						<button class="btn-main">Отправить</button>
 						<div class="agree-form">Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики конфиденциальности</a></div>
@@ -265,7 +265,7 @@
 						<img src="img/share.png" alt="alt">
 						<img src="img/share2.png" alt="alt">
 					</div>
-					<div class="title-share">Поделитесь этой вашей личной ссылкой с коллегами, чтобы мы знали состав вашей бригады</div>
+					<div class="title-share"><span>Имя</span>, поделитесь этой ссылкой с коллегами!</div>
 					<div class="share-unit">
 						<div class="share-unit__value">https://old.wordstat.yandex.ru/#!/?reg</div>
 						<div class="share-unit__btn">
@@ -293,7 +293,7 @@
 							<input type="email" placeholder="E-mail" required>
 						</div>
 						<div class="item-form">
-							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" required>
+							<input type="tel" placeholder="+7 (___) ___-__-__" class="input-phone" required>
 						</div>
 						<div class="item-form">
 							<textarea placeholder="Сообщение"></textarea>
@@ -310,6 +310,6 @@
 
 	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
-	<script src="js/common.js?ver=1.4"></script>
+	<script src="js/common.js?ver=1.14"></script>
 </body>
 </html>
