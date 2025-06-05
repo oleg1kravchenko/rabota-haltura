@@ -21,6 +21,28 @@ $(document).ready(function () {
 	//mask
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
+	//share
+	  $('.share-unit__btn').on('click', function () {
+		const $btn = $(this);
+		const text = $btn.siblings('.share-unit__value').text().trim();
+
+		const tempInput = $('<input>');
+		$('body').append(tempInput);
+		tempInput.val(text).select();
+		document.execCommand('copy');
+		tempInput.remove();
+
+		let $tooltip = $('<div class="copy-tooltip">Ссылка скопирована</div>');
+		$btn.append($tooltip);
+		setTimeout(() => $tooltip.addClass('active'), 10); 
+
+		setTimeout(() => {
+		$tooltip.removeClass('active');
+		setTimeout(() => $tooltip.remove(), 300); 
+		}, 1500);
+
+  });
+
 	//progressbar
 	function updateProgressBar() {
 		var $modals = $('.modal');
