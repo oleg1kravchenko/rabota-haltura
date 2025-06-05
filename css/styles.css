@@ -321,7 +321,7 @@ body {
 .modal__content {
 	padding: 14px 10px;
 	min-height: 268px;
-	max-width: 500px;
+	max-width: 370px;
 	width: 100%;
 	margin: 0 auto;
 	border: 1px solid #f7f7f7;
@@ -528,6 +528,7 @@ body {
 	border: 1px solid #e6e6e6;
 	border-radius: 6px;
 	resize: none;
+	background: transparent;
 	display: block;
 }
 .item-form textarea {
