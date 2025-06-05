@@ -87,31 +87,35 @@ $(document).ready(function () {
 		updateProgressBar();
 	});
 
-	$(".next-modal").click(function (e) {
-		e.preventDefault();
+$(".next-modal").click(function (e) {
+	e.preventDefault();
 
-		var $currentTab = $(this).parents(".modal");
-		if ($currentTab.find('.input[type="radio"], input[type="checkbox"]').length > 0) {
-			if ($currentTab.find('input[type="radio"]:checked, input[type="checkbox"]:checked').length > 0) {
-				$currentTab.removeClass("active").removeClass("zoom-in").addClass("zoom-out");
-				$currentTab.next(".modal").addClass("active").addClass("zoom-in").removeClass("zoom-out");
-			} else {
-				alert("Пожалуйста, выберите хотя бы один вариант ответа.");
-			}
-		} else {
-			$currentTab.removeClass("active").removeClass("zoom-in").addClass("zoom-out");
-			$currentTab.next(".modal").addClass("active").addClass("zoom-in").removeClass("zoom-out");
+	var $currentTab = $(this).parents(".modal");
+
+	if ($currentTab.find('input[type="radio"], input[type="checkbox"]').length > 0) {
+
+		const isChecked = $currentTab.find('input[type="radio"]:checked, input[type="checkbox"]:checked').length > 0;
+		const $another = $currentTab.find('.checkbox_another input[type="text"]');
+		const anotherHasText = $another.length > 0 && $another.val().trim() !== "";
+
+		if (isChecked || anotherHasText) {
+			$currentTab.removeClass("active zoom-in").addClass("zoom-out");
+			$currentTab.next(".modal").addClass("active zoom-in").removeClass("zoom-out");
 		}
+	} else {
+		$currentTab.removeClass("active zoom-in").addClass("zoom-out");
+		$currentTab.next(".modal").addClass("active zoom-in").removeClass("zoom-out");
+	}
 
-		if ($(".modal_success").hasClass("active")) {
-			setTimeout(() => {
-				$(".modal_success").removeClass("active").removeClass("flip-in").addClass("flip-out");
-				$(".modal_success").next(".modal").addClass("active").addClass("flip-in").removeClass("flip-out");
-			}, 2000);
-		}
+	if ($(".modal_success").hasClass("active")) {
+		setTimeout(() => {
+			$(".modal_success").removeClass("active flip-in").addClass("flip-out");
+			$(".modal_success").next(".modal").addClass("active flip-in").removeClass("flip-out");
+		}, 2000);
+	}
 
-		updateProgressBar();
-	});
+	updateProgressBar();
+});
 
 	$('.modal').on('change', '.radio input[type="radio"]', function () {
 		var $currentTab = $(this).parents('.modal');
@@ -170,8 +174,6 @@ $(document).ready(function () {
 		$(this).parents('.checkbox_another').toggleClass("active");
 	});
 
-
-
 	$('#modal-cooperation .btn-main').click(function (e) {
 
 		const $form = $(this).closest('form');
@@ -212,8 +214,8 @@ $(document).ready(function () {
 			$(".modal_success").addClass("active").addClass("zoom-in").removeClass("zoom-out");
 
 			setTimeout(() => {
-				$(".modal_success").removeClass("active").removeClass("flip-in").addClass("flip-out");
-				$(".modal_success").next(".modal").addClass("active").addClass("flip-in").removeClass("flip-out");
+				$(".modal_success").removeClass("active").removeClass("flip-in").addClass("flip-out").removeClass("zoom-in").removeClass("zoom-out");
+				$(".modal_success").next(".modal").addClass("active").addClass("flip-in").removeClass("flip-out").removeClass("zoom-in").removeClass("zoom-out");
 			}, 1400);
 		}
 		updateProgressBar();
@@ -225,5 +227,12 @@ $(document).ready(function () {
 
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  $('body').addClass('theme-dark');
+  document.body.classList.add('theme-dark');
 }
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+  if (e.matches) {
+    document.body.classList.add('theme-dark');
+  } else {
+    document.body.classList.remove('theme-dark');
+  }
+});
