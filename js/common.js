@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	//marquee
  const $marquee = $('.marquee');
   const speed = 80; 
 
@@ -17,6 +18,8 @@ $(document).ready(function () {
     'width': scrollWidth + 'px'
   });
 
+	//mask
+	$(".input-phone").mask("+7 (999) 999-99-99");
 
 	//progressbar
 	function updateProgressBar() {
