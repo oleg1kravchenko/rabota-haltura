@@ -1,39 +1,21 @@
 $(document).ready(function () {
 
-	let $marquee = $('.marquee');
-	let text = $marquee.html();
+ const $marquee = $('.marquee');
+  const speed = 80; 
 
-	while ($marquee[0].scrollWidth < $marquee.parent().width() * 6) {
-		$marquee.append(text);
-	}
+  // дублируем текст
+  const text = $marquee.html();
+  while ($marquee[0].scrollWidth < $marquee.parent().width() * 2) {
+    $marquee.append(text);
+  }
 
-	let scrollWidth = $marquee[0].scrollWidth;
-	$marquee.css('--scrollWidth', scrollWidth + 'px');
+  const scrollWidth = $marquee[0].scrollWidth;
+  const duration = scrollWidth / speed;
 
-	//mask
-	$(".input-phone").mask("+7 (999) 999-99-99");
-
-	//share
-	$('.share-unit__btn').on('click', function () {
-		const $btn = $(this);
-		const text = $btn.siblings('.share-unit__value').text().trim();
-
-		const tempInput = $('<input>');
-		$('body').append(tempInput);
-		tempInput.val(text).select();
-		document.execCommand('copy');
-		tempInput.remove();
-
-		let $tooltip = $('<div class="copy-tooltip">Ссылка скопирована</div>');
-		$btn.append($tooltip);
-		setTimeout(() => $tooltip.addClass('active'), 10);
-
-		setTimeout(() => {
-			$tooltip.removeClass('active');
-			setTimeout(() => $tooltip.remove(), 300);
-		}, 1500);
-
-	});
+  $marquee.css({
+    'animation-duration': duration + 's',
+    'width': scrollWidth + 'px'
+  });
 
 
 	//progressbar

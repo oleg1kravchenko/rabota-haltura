@@ -157,8 +157,8 @@ body {
   display: flex;
   white-space: nowrap;
   position: absolute;
+  will-change: transform;
   animation: marqueeAnim linear infinite;
-  animation-duration: 28s; 
 }
 
 .marquee span {
