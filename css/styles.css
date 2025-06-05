@@ -20,7 +20,7 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
-*::-webkit-input-placeholder {
+*::-webkit-input-placeholder { 
 	color: #666;
 	opacity: 1;
 }
@@ -132,6 +132,7 @@ body {
 	padding: 3px 15px;
 	padding-left: 12px;
 	max-width: 1000px;
+	gap: 15px;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -143,11 +144,33 @@ body {
 }
 .header__title {
 	padding: 2px 7px;
+	height: 21px;
 	box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.06);
 	border-radius: 3px;
 	border: 1px solid #f0da2f;
 	white-space: nowrap;
     overflow: hidden;
+	flex: 1;
+	position: relative;
+}
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  animation: marqueeAnim linear infinite;
+  animation-duration: 28s; 
+}
+
+.marquee span {
+  padding-right: 10px; 
+}
+@keyframes marqueeAnim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .billbord {
@@ -309,16 +332,16 @@ body {
 
 }
 .modal__close {
-	top: 13px;
-	right: 10px;
-	width: 11px;
-	height: 11px;
+	top: 0;
+	right: 0;
+    width: 35px;
+    height: 35px;
 	cursor: pointer;
 	position: absolute;
 	background-image: url(../img/close.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
+	z-index: 10;
 }
 .progressbar {
 	height: 9px;
@@ -350,6 +373,7 @@ body {
 	position: relative;
 	cursor: pointer;
 }
+.checkbox__fake,
 .radio__fake,
 .checkbox label input,
 .radio label input {
@@ -361,6 +385,8 @@ body {
 	margin: 0;
 	margin-right: 12px;
 }
+.checkbox__fake::before,
+.checkbox__fake::after,
 .radio__fake::before,
 .checkbox input::after,
 .checkbox input::before,
@@ -386,24 +412,45 @@ body {
 	opacity: 0;
 	background-image: url(../img/radio_active.svg);
 }
+.checkbox__fake::before,
 .checkbox input::before {
 	background-image: url(../img/checkbox.svg);
 }
+.checkbox__fake::after,
 .checkbox input::after {
 	opacity: 0;
 	background-image: url(../img/checkbox_active.svg);
 }
+.checkbox_another.active .checkbox__fake::before,
 .checkbox input:checked:before,
 .radio input:checked:before {
 	opacity: 0;
 }
+.checkbox_another.active .checkbox__fake::after,
 .checkbox input:checked:after,
 .radio input:checked:after {
 	opacity: 1;
 }
+.checkbox_another.active .checkbox__fake + span,
 .checkbox input:checked + span,
 .radio input:checked + span {
 	font-weight: 500;
+}
+.checkbox__click {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.checkbox__fake {
+	flex: none !important;
+}
+.checkbox_another.active input {
+	z-index: 10;
+	visibility: visible;
+	opacity: 1;
 }
 .checkbox,
 .radio {
@@ -452,21 +499,19 @@ body {
 	font-size: 11px;
 	gap: 4px;
 	text-transform: uppercase;
-	color: #fff;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background: #000;
+	color: #000;
 	border: 1px solid #000;
 	border-radius: 3px;
+	background: transparent;
 }
 .btn-page.btn-page_border {
-	color: #000;
-	background: transparent;
 	opacity: 0.5;
 }
-.btn-page.btn-page_border img {
+.btn-page img {
   filter: brightness(0%);
 }
 .modal__buttons .btn-page_border img {
@@ -586,7 +631,7 @@ body {
 	visibility: visible;
 }
 .modal.active {
-	opacity: 1;
+	opacity: 1; 
 	visibility: visible;
 }
 .flip-in .modal__content {
@@ -748,11 +793,12 @@ body {
 }
 .theme-dark .btn-page {
 	border-color: #fff;
+	color: #fff;
 }
 .theme-dark .btn-page.btn-page_border {
 	color: #fff;
 }
-.theme-dark .btn-page.btn-page_border img {
+.theme-dark .btn-page img {
     filter: none;
 }
 .theme-dark .checkbox span input {
@@ -952,6 +998,17 @@ body {
 .billbord__buttons .btn-main::before {
 	display: none;
 }
+.no-filled .next-modal {
+	visibility: hidden;
+	opacity: 0;
+}
+.filled .next-modal {
+	opacity: 1;
+	visibility: visible;
+}
+.billbord .header__title {
+	margin-top: 25px;
+}
 
 @media (hover: hover) {
 	.billbord__buttons .btn-main:hover {
@@ -965,40 +1022,13 @@ body {
 	}
 }
 
-@media only screen and (min-width : 1000px) {
-.link-page {
-    font-size: 14px;
-}
-body {
-    font-size: 15px;
-}
-.billbord__title {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-.billbord__descr {
-    font-size: 16px;
-    margin-bottom: 25px;
-}
-.logo img {
-    width: 140px;
-}
-.header__title {
-    padding: 5px 10px;
-}
-.modal__title {
-    font-size: 17px;
-}
-.btn-page {
-    height: 31px;
-    padding: 0 13px;
-    font-size: 13px;
-    gap: 8px;
-}
-.checkbox span input {
-    font-size: 15px;
-}
-.item-form input, .item-form textarea {
-	font-size: 15px;
-}
+@media only screen and (min-width : 700px) {
+	.wrapper {
+		max-width: 360px;
+		margin: 0 auto;
+	}
+	.header__wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

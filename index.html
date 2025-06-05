@@ -6,28 +6,27 @@
 <html lang="ru">
 <!--<![endif]-->
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<title>Заголовок</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="format-detection" content="telephone=no" />
-	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/styles.css?ver=1.1" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/styles.css?ver=1.2">
 </head>
-<body>
+<body class="theme-dark">
 
 	<div class="wrapper">
 
-		<header class="header">
-			<div class="header__wrapper">
+		<header class="header"> 
+			<div class="header__wrapper"> 
 				<a href="/" class="logo">
 					<img src="img/logo.jpg" alt="alt">
 					<img src="img/logo2.jpg" alt="alt">
 				</a>
-				<div class="header__title">Требуется: Сварщики, Монтажники</div>
 			</div>
 		</header>
-
+ 
 		<section class="billbord">
 			<div class="billbord__image">
 				<img src="img/billbord.jpg" alt="alt">
@@ -36,6 +35,9 @@
 				<h1 class="billbord__title">Санкт-Петербург</h1>
 				<h2 class="billbord__descr">Работа, халтура, объекты</h2>
 				<button class="btn-main open-modal">Присоединиться</button>
+				<div class="header__title">
+					<div class="marquee"><span>Требуется: Сварщики, Монтажники </span></div>
+				</div>
 			</div>
 		</section>
 
@@ -56,37 +58,37 @@
 					<div class="modal__title">Что Вас интересует</div>
 					<div class="radio">
 						<label>
-							<input type="radio" name="radio1"/>
+							<input type="radio" name="radio1">
 							<span>Работа</span>
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-							<input type="radio" name="radio1"/>
+							<input type="radio" name="radio1">
 							<span>Подработка</span>
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-							<input type="radio" name="radio1"/>
+							<input type="radio" name="radio1">
 							<span>Халтуры</span>
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-							<input type="radio" name="radio1"/>
+							<input type="radio" name="radio1">
 							<span>Сотрудники</span>
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-							<input type="radio" name="radio1"/>
+							<input type="radio" name="radio1">
 							<span>Объекты строительства</span>
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-							<input type="radio" name="radio1"/>
+							<input type="radio" name="radio1">
 							<span>Продолжить объем работ</span>
 						</label>
 					</div>
@@ -110,37 +112,38 @@
 					<div class="modal__title">Какими видами сварки вы владете ?</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"/>
+							<input type="checkbox">
 							<span>Ручная электродуговая</span>
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"/>
+							<input type="checkbox">
 							<span>Полуавтоматическая</span>
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"/>
+							<input type="checkbox">
 							<span>Аргоновая</span>
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"/>
+							<input type="checkbox">
 							<span>Плазменная</span>
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"/>
+							<input type="checkbox">
 							<span>Сварка в среде газа</span>
 						</label>
 					</div>
-					<div class="checkbox">
+					<div class="checkbox checkbox_another">
 						<label>
-							<input type="checkbox"/>
+							<span class="checkbox__fake"></span>
+							<span class="checkbox__click"></span>
 							<span>Введите другой вариант <input type="text" placeholder="Введите другой вариант"></span>
 						</label>
 					</div>
@@ -187,7 +190,7 @@
 							<div class="radios-socials">
 								<div class="radio-social radio-social_call">
 									<label>
-										<input type="radio" name="socials" checked/>
+										<input type="radio" name="socials" checked>
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc1.svg" alt="alt">
@@ -198,7 +201,7 @@
 								</div>
 								<div class="radio-social radio-social_wp">
 									<label>
-										<input type="radio" name="socials"/>
+										<input type="radio" name="socials">
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc2.svg" alt="alt">
@@ -209,7 +212,7 @@
 								</div>
 								<div class="radio-social radio-social_tg">
 									<label>
-										<input type="radio" name="socials"/>
+										<input type="radio" name="socials">
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc3.svg" alt="alt">
@@ -220,7 +223,7 @@
 								</div>
 								<div class="radio-social radio-social_vk">
 									<label>
-										<input type="radio" name="socials"/>
+										<input type="radio" name="socials">
 										<span class="radio-social__content">
 											<span class="radio-social__icon">
 												<img src="img/soc4.svg" alt="alt">
@@ -233,7 +236,7 @@
 						</div>
 						<div class="item-form">
 							<div class="item-form__title">Введите номер телефона</div>
-							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" inputmode="numeric" required>
+							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" required>
 						</div>
 						<button class="btn-main">Отправить</button>
 						<div class="agree-form">Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики конфиденциальности</a></div>
@@ -287,10 +290,10 @@
 							<input type="text" placeholder="Организация" required>
 						</div>
 						<div class="item-form">
-							<input type="email" placeholder="E-mail" inputmode="email" required>
+							<input type="email" placeholder="E-mail" required>
 						</div>
 						<div class="item-form">
-							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" inputmode="numeric" required>
+							<input type="tel" placeholder="+7 ( ___) ___ - __ - __" class="input-phone" required>
 						</div>
 						<div class="item-form">
 							<textarea placeholder="Сообщение"></textarea>
@@ -307,6 +310,6 @@
 
 	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
-	<script src="js/common.js?ver=1.1"></script>
+	<script src="js/common.js?ver=1.2"></script>
 </body>
 </html>
