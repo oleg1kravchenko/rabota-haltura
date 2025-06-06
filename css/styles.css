@@ -1076,3 +1076,9 @@ body {
   border-radius: 10px;
   background-color: transparent;
 }
+
+@media (max-width: 500px) {
+.link-page {
+    font-size: 1.6vh;
+}
+}
