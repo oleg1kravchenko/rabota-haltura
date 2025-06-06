@@ -273,6 +273,8 @@ function scaleLayout() {
   const scale = Math.min(scaleX, scaleY);
 
   layout.style.transform = `scale(${scale})`;
+
+  layout.classList.add('layout_visible');
 }
 
 window.addEventListener('resize', scaleLayout);
