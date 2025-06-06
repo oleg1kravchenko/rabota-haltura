@@ -5,7 +5,7 @@ $(document).ready(function () {
 	const speed = 60; 
 
 	const text = $marquee.html();
-	while ($marquee[0].scrollWidth < $marquee.parent().width() * 50) {
+	while ($marquee[0].scrollWidth < $marquee.parent().width() * 60) {
 		$marquee.append(text);
 	}
 
@@ -17,25 +17,6 @@ $(document).ready(function () {
 		'width': scrollWidth + 'px'
 	});
 
-	// $('.marquee').slick({
-	// 		arrows: false,
-	// 		dots: false,
-	// 		infinite: true,
-	// 		touchThreshold: 1000,
-	// 		variableWidth: true,
-	// 		slidesToShow: 3,
-	// 		slidesToScroll: 1,
-	// 		speed: 8000,
-	//         autoplay: true,
-	//         autoplaySpeed: 0, 
-	//         cssEase: 'linear',
-	// 	});
-
-	// $(window).on('resize', function () {
-	// setTimeout(() => {
-	// 	$('.marquee').slick('setPosition');
-	// }, 200);
-	// });
 
 	//mask
 	$(".input-phone").mask("+7 (999) 999-99-99");
@@ -84,6 +65,7 @@ $(document).ready(function () {
 
 		setTimeout(() => {
 			$(".modal-overlay").removeClass("active");
+			$("body").removeClass("body_modal");
 		}, 500);
 
 		updateProgressBar();
@@ -95,9 +77,11 @@ $(document).ready(function () {
 		if ($(".modals-wrap .modal:first-child").hasClass("active")) {
 			$(".modals-wrap .modal:first-child").removeClass("active").removeClass("zoom-in").addClass("zoom-out");
 			$(".modal-overlay").removeClass("active");
+			$("body").removeClass("body_modal");
 		} else {
 			$(".modals-wrap .modal:first-child").addClass("zoom-in").removeClass("zoom-out").addClass("active");
 			$(".modal-overlay").addClass("active");
+			$("body").addClass("body_modal");
 		}
 
 		updateProgressBar();

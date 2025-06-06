@@ -18,21 +18,26 @@ html {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
 }
 
 .layout {
   width: 320px;
   height: 568px;
-  transform-origin: center;
-opacity: 0;
+  transform-origin: center top;
+  opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
 .layout.layout_visible {
   opacity: 1;
   visibility: visible;
+}
+
+.body_modal .scale-wrapper {
+	position: relative;
+	z-index: 2;
 }
 
 .container {
