@@ -255,13 +255,25 @@ $(".next-modal").click(function (e) {
 });
 
 
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//   document.body.classList.add('theme-dark');
-// }
-// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-//   if (e.matches) {
-//     document.body.classList.add('theme-dark');
-//   } else {
-//     document.body.classList.remove('theme-dark');
-//   }
-// });
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.body.classList.add('theme-dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+  if (e.matches) {
+    document.body.classList.add('theme-dark');
+  } else {
+    document.body.classList.remove('theme-dark');
+  }
+});
+
+function scaleLayout() {
+  const layout = document.querySelector('.layout');
+  const scaleX = window.innerWidth / 320;
+  const scaleY = window.innerHeight / 568;
+  const scale = Math.min(scaleX, scaleY);
+
+  layout.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', scaleLayout);
+window.addEventListener('load', scaleLayout);
